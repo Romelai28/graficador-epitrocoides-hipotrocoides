@@ -37,8 +37,8 @@ ace2 = 0
 # ace2 = -0.015
 
 # POLÍGONO N+1 LADOS
-# ace1 = 0.1
-# ace2 = -0.N
+# ace1 = 0.01
+# ace2 = -0.0N
 
 CENTRO_X = WINDOW_WIDTH/2
 CENTRO_Y = WINDOW_HEIGHT/2
