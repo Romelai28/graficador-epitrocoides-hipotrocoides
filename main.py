@@ -6,7 +6,7 @@ pygame.init()
 
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 500
-FPS = 600
+FPS = 60
 LONGITUD_COLA = 1500
 
 # CONSTANTES
@@ -15,9 +15,21 @@ m1 = 20
 m2 = 20
 l1 = 125
 l2 = 125
-ang1 = 1
-ang2 = 1
 
+ang1 = 1.9
+ang2 = 1.9
+vel1 = 0
+vel2 = 0
+ace1 = 0.001
+ace2 = -0.0015
+
+# ESTRELLA
+#ace1 = 0.0010
+#ace2 = -0.0015
+
+# POLIGONO N+1 LADOS
+#ace1 = 0.1
+#ace2 = -0.N
 
 # LONGITUD_COLA = 400
 
@@ -68,11 +80,14 @@ while True:
 # DESPUES CORREGIR EL ORDEN DE DIBUJO PARA QUE NO SE SOLAPE
 
 
-    ang1 += 2.9
-    ang2 -= 3
+    ang1 += vel1
+    ang2 += vel2
+
+    vel1 += ace1
+    vel2 += ace2
 
     # DIBUJAR TRAZO
-    puntos_trazo.append([x2, math.floor(y2)])
+    puntos_trazo.append([x2, y2])
     if len(puntos_trazo) > LONGITUD_COLA:
         puntos_trazo.pop(0)
     pygame.draw.aalines(WINDOW, ROJO, False, list(puntos_trazo[i] for i in range(len(puntos_trazo))))
