@@ -19,11 +19,8 @@ LONGITUD_COLA = 300  # Cantidad de puntos de trayectoria se almacenan
 
 # Variables
 
-m1 = 20
-m2 = 20
 l1 = 125
 l2 = 125
-
 ang1 = 1.9
 ang2 = 1.9
 vel1 = 0.1
@@ -72,7 +69,7 @@ while True:
     # Dibujar pendulos:
     pygame.draw.aaline(WINDOW, AZUL, (CENTRO_X, CENTRO_Y), (x1, y1))  # Línea azul 1
     pygame.draw.aaline(WINDOW, AZUL, (x1, y1), (x2, y2))  # Línea azul 2
-    pygame.draw.circle(WINDOW, ROJO, (CENTRO_X, CENTRO_Y), 5)  # Punto centró
+    pygame.draw.circle(WINDOW, ROJO, (CENTRO_X, CENTRO_Y), 5)  # Punto centro
     pygame.draw.circle(WINDOW, BLANCO, (x1, y1), 5)  # Punta 1
     pygame.draw.circle(WINDOW, BLANCO, (x2, y2), 5)  # Punta 2
 
